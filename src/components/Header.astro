@@ -1,12 +1,12 @@
 ---
-// src/components/Header.astro
+import logo from '../imagenes/logo.jpg';
 ---
 <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
         <a href="/" class="text-white font-bold text-xl flex items-center">
-          <img src="/img/logo.jpg" alt="Sistemas Anich Logo" class="h-8 w-8 rounded-full inline-block mr-3" />
+          <img src={logo.src} alt="Sistemas Anich Logo" class="h-8 w-8 rounded-full inline-block mr-3" />
           <span>Sistemas Anich</span>
         </a>
       </div>

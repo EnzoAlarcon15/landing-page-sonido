@@ -1,16 +1,19 @@
---- 
+---
+import logo from '../imagenes/logo.jpg';
+import fondo from '../imagenes/sonido.jpg';
+ 
 const WPP_NUMBER = import.meta.env.PUBLIC_WPP_NUMBER;
 ---
 
 <section class="relative flex flex-col items-center justify-center min-h-screen text-center text-white bg-gray-900 px-4 sm:px-6 lg:px-8 overflow-hidden">
   <!-- Fondo con imagen -->
   <div class="absolute inset-0 z-0">
-    <img src="/img/sonido.jpg" alt="Fondo de evento" class="w-full h-full object-cover opacity-40" />
+    <img src={fondo.src} alt="Fondo de evento" class="w-full h-full object-cover opacity-40" />
     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
   </div>
 
   <div class="relative z-10 max-w-4xl flex flex-col items-center">
-    <img src="/img/logo.jpg" alt="Sistemas Anich Logo" class="h-24 w-24 mb-6 rounded-full object-cover shadow-lg" />
+    <img src={logo.src} alt="Sistemas Anich Logo" class="h-24 w-24 mb-6 rounded-full object-cover shadow-lg" />
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins tracking-tight leading-tight mb-4">
       Sistemas Anich
     </h1>
