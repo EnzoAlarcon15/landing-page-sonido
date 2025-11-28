@@ -1,0 +1,40 @@
+---
+const WPP_NUMBER = import.meta.env.PUBLIC_WPP_NUMBER;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold font-poppins text-white mb-4">¿Listo para tu evento?</h2>
+    <p class="text-lg font-inter mb-8">Contactanos y hagamos que sea inolvidable.</p>
+    <a
+      href={"https://wa.me/" + WPP_NUMBER}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block bg-neon-green text-gray-900 font-bold font-inter py-3 px-8 rounded-full text-lg hover:bg-green-400 transition-colors duration-300 transform hover:scale-105 mb-12"
+    >
+      ¡Contactanos por WhatsApp!
+    </a>
+
+    <!-- Google Maps -->
+    <div class="mt-12 mb-8">
+      <h3 class="text-xl font-bold text-white mb-4">Nuestra Ubicación</h3>
+      <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.836322039184!2d-60.2213891849628!3d-26.5259929832949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9441b88c3b7a0b3b%3A0x8b1a3b5b0b8a0b3b!2sQuitilipi%2C%20Chaco!5e0!3m2!1ses!2sar!4v1678886666666!5m2!1ses!2sar"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 pt-8">
+      <p class="font-inter">&copy; {currentYear} Sistemas Anich. Todos los derechos reservados.</p>
+      <p class="font-inter mt-2">Teléfono: <a href={"tel:" + WPP_NUMBER} class="hover:text-neon-green">{WPP_NUMBER}</a></p>
+    </div>
+  </div>
+</footer>

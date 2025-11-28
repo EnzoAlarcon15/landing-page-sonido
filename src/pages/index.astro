@@ -1,0 +1,62 @@
+---
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Carousel from '../components/Carousel.astro';
+import Services from '../components/Services.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Footer from '../components/Footer.astro';
+
+// Imágenes agrupadas por categoría
+const casamientosImages = [
+  '/img/casamiento.jpg',
+  '/img/casamiento01.jpg',
+  '/img/casamiento02.jpg',
+  '/img/casamiento%2003.jpg',
+  '/img/casamiento04.jpg',
+];
+
+const cumpleanosImages = [
+  '/img/cumpleaños.jpg',
+  '/img/cumpleaños%2001.jpg',
+  '/img/cumpleaños%2003.jpg',
+  '/img/cumpleaños%20nelson.jpg',
+  '/img/cumpleaños%20nelson01.jpg',
+];
+
+const fiestasImages = [
+  '/img/fiesta%20de%20educacion%20fisica.jpg',
+  '/img/fiesta%20de%20educacion%20fisica01.jpg',
+  '/img/fiesta%20de%20educacion%20fisica02.jpg',
+  '/img/fiesta%20de%20educacion%20fisica03.jpg',
+];
+
+const sonidoImages = [
+  '/img/sonido.jpg',
+  '/img/sonido%20foto.jpg',
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sistemas Anich - Alquiler de Sonido, DJ y Animador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-gray-900 text-white">
+    <Header />
+    <Hero />
+    <div id="servicios"><Services /></div>
+    <div id="galeria">
+      <Carousel title="Casamientos" images={casamientosImages} />
+      <Carousel title="Cumpleaños" images={cumpleanosImages} />
+      <Carousel title="Fiestas y Eventos" images={fiestasImages} />
+      <Carousel title="Nuestro Sonido" images={sonidoImages} />
+    </div>
+    <div id="testimonios"><Testimonials /></div>
+    <div id="contacto"><Footer /></div>
+  </body>
+</html>
