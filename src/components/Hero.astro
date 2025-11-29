@@ -14,13 +14,13 @@ const WPP_NUMBER = import.meta.env.PUBLIC_WPP_NUMBER;
 
   <div class="relative z-10 max-w-4xl flex flex-col items-center">
     <img src={logo.src} alt="Sistemas Anich Logo" class="h-24 w-24 mb-6 rounded-full object-cover shadow-lg transition-transform duration-700 hover:scale-110" />
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins tracking-tight leading-tight mb-4 transition-all duration-700 animate-fade-in">
+    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold font-poppins tracking-tight leading-tight mb-4 transition-all duration-700 animate-fade-in neon-text">
       Sistemas Anich
     </h1>
-    <p class="text-lg sm:text-xl md:text-2xl font-inter text-gray-300 mb-4 transition-opacity duration-700 animate-fade-in">
+    <p class="text-lg sm:text-2xl md:text-3xl font-bold font-inter text-neon-blue mb-4 transition-opacity duration-700 animate-fade-in">
       Alquiler de Sonido, DJ y Animador para tus eventos
     </p>
-    <p class="text-md sm:text-lg font-inter text-gray-400 max-w-2xl transition-opacity duration-700 animate-fade-in">
+    <p class="text-md sm:text-lg font-inter text-neon-pink max-w-2xl transition-opacity duration-700 animate-fade-in">
       Somos una empresa dedicada al alquiler de sonido e iluminación profesional, hacemos que tu fiesta sea única.
     </p>
   </div>
@@ -32,6 +32,26 @@ const WPP_NUMBER = import.meta.env.PUBLIC_WPP_NUMBER;
 }
 .animate-fade-in {
   animation: fade-in 1s ease-out;
+}
+.neon-text {
+  color: #fff;
+  text-shadow:
+    0 0 8px #0ff,
+    0 0 16px #0ff,
+    0 0 32px #0ff,
+    0 0 64px #0ff;
+}
+.text-neon-blue {
+  color: #00eaff;
+  text-shadow:
+    0 0 6px #00eaff,
+    0 0 12px #00eaff;
+}
+.text-neon-pink {
+  color: #ff3ec8;
+  text-shadow:
+    0 0 6px #ff3ec8,
+    0 0 12px #ff3ec8;
 }
 </style>
 </section>
