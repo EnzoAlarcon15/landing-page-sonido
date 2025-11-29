@@ -34,12 +34,12 @@ import logo from '../imagenes/logo.jpg';
   </nav>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="md:hidden hidden" id="mobile-menu">
+  <div class="md:hidden hidden transition-all duration-300 ease-in-out" id="mobile-menu">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      <a href="#servicios" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Servicios</a>
-      <a href="#galeria" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Galería</a>
-      <a href="#testimonios" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimonios</a>
-      <a href="#contacto" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+      <a href="#servicios" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Servicios</a>
+      <a href="#galeria" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Galería</a>
+      <a href="#testimonios" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Testimonios</a>
+      <a href="#contacto" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Contacto</a>
     </div>
   </div>
 </header>
@@ -73,5 +73,16 @@ import logo from '../imagenes/logo.jpg';
 <style>
   html {
     scroll-behavior: smooth;
+  }
+  #mobile-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  #mobile-menu:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 </style>

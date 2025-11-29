@@ -5,7 +5,7 @@ import fondo from '../imagenes/sonido.jpg';
 const WPP_NUMBER = import.meta.env.PUBLIC_WPP_NUMBER;
 ---
 
-<section class="relative flex flex-col items-center justify-center min-h-screen text-center text-white bg-gray-900 px-4 sm:px-6 lg:px-8 overflow-hidden">
+<section class="relative flex flex-col items-center justify-center min-h-screen text-center text-white bg-gray-900 px-4 sm:px-6 lg:px-8 overflow-hidden transition-all duration-700 animate-fade-in">
   <!-- Fondo con imagen -->
   <div class="absolute inset-0 z-0">
     <img src={fondo.src} alt="Fondo de evento" class="w-full h-full object-cover opacity-40" />
@@ -13,15 +13,25 @@ const WPP_NUMBER = import.meta.env.PUBLIC_WPP_NUMBER;
   </div>
 
   <div class="relative z-10 max-w-4xl flex flex-col items-center">
-    <img src={logo.src} alt="Sistemas Anich Logo" class="h-24 w-24 mb-6 rounded-full object-cover shadow-lg" />
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins tracking-tight leading-tight mb-4">
+    <img src={logo.src} alt="Sistemas Anich Logo" class="h-24 w-24 mb-6 rounded-full object-cover shadow-lg transition-transform duration-700 hover:scale-110" />
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold font-poppins tracking-tight leading-tight mb-4 transition-all duration-700 animate-fade-in">
       Sistemas Anich
     </h1>
-    <p class="text-lg sm:text-xl md:text-2xl font-inter text-gray-300 mb-4">
+    <p class="text-lg sm:text-xl md:text-2xl font-inter text-gray-300 mb-4 transition-opacity duration-700 animate-fade-in">
       Alquiler de Sonido, DJ y Animador para tus eventos
     </p>
-    <p class="text-md sm:text-lg font-inter text-gray-400 max-w-2xl">
+    <p class="text-md sm:text-lg font-inter text-gray-400 max-w-2xl transition-opacity duration-700 animate-fade-in">
       Somos una empresa dedicada al alquiler de sonido e iluminación profesional, hacemos que tu fiesta sea única.
     </p>
   </div>
+</section>
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+</style>
 </section>
